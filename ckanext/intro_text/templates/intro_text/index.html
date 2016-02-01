@@ -1,0 +1,44 @@
+{% extends "page.html" %}
+{% block subtitle %}{{ _('Intro Text') }}{% endblock %}
+{% block breadcrumb_content %}
+  <li class="active"><a href="#">{{ _('Intro Text') }}</a></li>
+{% endblock %}
+
+
+{% block secondary_content %}
+
+{% endblock %}
+
+{% block primary_content %}
+</div>
+<div class="span11">
+<script type="text/javascript" src="js/bootstrap-markdown.js"></script>
+ <script src="//rawgit.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js"></script>
+<script src="js/markdown.js"></script>
+ <script src="js/to-markdown.js"></script>
+<style type="text/css">
+.btn-toolbar {
+    font-size: 1em; 
+    margin-top: 10px;
+    margin-bottom: 10px;}
+</style>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-markdown.min.css">
+
+<form method="post" action='/intro_save'>
+	<label for="intro_sk">{{_('Slovak intro text')}} </label>
+    <textarea name="intro_sk" id="intro_sk" data-provide="markdown" rows="10">{{ h.print_intro('sk') }}</textarea>
+    <label for="intro_en">{{_('English intro text')}} </label>
+    <textarea name="intro_en" id="intro_en" data-provide="markdown" rows="10">{{ h.print_intro('en') }}</textarea>
+    <hr/>
+    <button type="submit" class="btn">{{_('Submit')}}</button>
+  </form> 
+</div>
+
+
+{% endblock %}
+
+
+    
+
+
+
