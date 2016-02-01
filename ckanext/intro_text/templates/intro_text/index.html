@@ -23,14 +23,24 @@
     margin-bottom: 10px;}
 </style>
 <link rel="stylesheet" type="text/css" href="css/bootstrap-markdown.min.css">
+{% if en_version %}
+<div class="alert alert-danger">
+  {{en_version}}
+</div>
+{%endif%}
 
+{% if sk_version %}
+<div class="alert alert-danger">
+  {{sk_version}}
+</div>
+{%endif%} 
 <form method="post" action='/intro_save'>
 	<label for="intro_sk">{{_('Slovak intro text')}} </label>
     <textarea name="intro_sk" id="intro_sk" data-provide="markdown" rows="10">{{ h.print_intro('sk') }}</textarea>
     <label for="intro_en">{{_('English intro text')}} </label>
     <textarea name="intro_en" id="intro_en" data-provide="markdown" rows="10">{{ h.print_intro('en') }}</textarea>
     <hr/>
-    <button type="submit" class="btn">{{_('Submit')}}</button>
+    <button type="submit" class="btn">{{_('Save')}}</button>
   </form> 
 </div>
 

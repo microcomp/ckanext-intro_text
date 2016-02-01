@@ -1,0 +1,45 @@
+# Translations template for ckanext-intro_text.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the ckanext-intro_text
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-intro_text 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-02-01 13:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: ckanext/intro_text/intro_text.py:71
+msgid "English version required"
+msgstr ""
+
+#: ckanext/intro_text/intro_text.py:75
+msgid "Slovak version required"
+msgstr ""
+
+#: ckanext/intro_text/templates/intro_text/index.html:2
+#: ckanext/intro_text/templates/intro_text/index.html:4
+msgid "Intro Text"
+msgstr ""
+
+#: ckanext/intro_text/templates/intro_text/index.html:28
+msgid "Slovak intro text"
+msgstr ""
+
+#: ckanext/intro_text/templates/intro_text/index.html:30
+msgid "English intro text"
+msgstr ""
+
+#: ckanext/intro_text/templates/intro_text/index.html:33
+msgid "Save"
+msgstr ""
+

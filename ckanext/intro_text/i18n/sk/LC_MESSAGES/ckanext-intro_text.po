@@ -1,0 +1,24 @@
+#: ckanext/intro_text/intro_text.py:71
+msgid "English version required"
+msgstr ""
+
+#: ckanext/intro_text/intro_text.py:75
+msgid "SK version required"
+msgstr ""
+
+#: ckanext/intro_text/templates/intro_text/index.html:2
+#: ckanext/intro_text/templates/intro_text/index.html:4
+msgid "Intro Text"
+msgstr "Úvodný text"
+
+#: ckanext/intro_text/templates/intro_text/index.html:28
+msgid "Slovak intro text"
+msgstr "Slovenská verzia"
+
+#: ckanext/intro_text/templates/intro_text/index.html:30
+msgid "English intro text"
+msgstr "Anglická verzia "
+
+#: ckanext/intro_text/templates/intro_text/index.html:33
+msgid "Save"
+msgstr "Uložiť"
