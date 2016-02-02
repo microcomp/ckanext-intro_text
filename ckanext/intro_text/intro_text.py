@@ -10,19 +10,21 @@ import ckan.model as model
 from ckan.common import _, c
 import ckan.plugins.toolkit as toolkit
 import sys
-reload(sys)  # Reload does the trick!
+reload(sys) 
 sys.setdefaultencoding('UTF8')
 import jinja2
 from ckan.common import _, c, g, request
 abort = base.abort
 render = base.render
 _check_access = logic.check_access
+
+
 def print_intro(lang):
     text = '' 
 
     if lang == 'en':
         try:
-            en = open('en_intro.txt', 'r')
+            en = open('/var/lib/ckan/resources/text-editor/en_intro.txt', 'r')
             en_text = en.read()
             en.close()
             text = en_text
@@ -30,7 +32,7 @@ def print_intro(lang):
             pass
     if lang == 'sk':
         try:
-            sk = open('sk_intro.txt', 'r')
+            sk = open('/var/lib/ckan/resources/text-editor/sk_intro.txt', 'r')
             sk_text = sk.read()
             sk.close()
             text = sk_text
@@ -53,7 +55,6 @@ class IntroTextController(base.BaseController):
 
     def save_content(self, context=None):
         context = {'model': model, 'session': model.Session,
-                   'user': c.user or c.author,
                    'auth_user_obj': c.userobj,
                    'for_view': True}
         try:
@@ -75,10 +76,10 @@ class IntroTextController(base.BaseController):
             extra_vars['sk_version'] = _('Slovak version required')
         if fail:
             return base.render('intro_text/index.html', extra_vars = extra_vars)
-        sk_file = open('sk_intro.txt', 'w')
+        sk_file = open('/var/lib/ckan/resources/text-editor/sk_intro.txt', 'w')
         sk_file.write(sk_txt.decode('utf-8', 'ignore'))
         sk_file.close()
-        en_file = open('en_intro.txt', 'w')
+        en_file = open('/var/lib/ckan/resources/text-editor/en_intro.txt', 'w')
         en_file.write(en_txt)
         en_file.close()
 
